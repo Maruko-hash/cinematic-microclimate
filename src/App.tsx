@@ -146,14 +146,12 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
         <div className="relative">
           <div
             onClick={() => { onEnable(); setPhase('quickrec'); }}
-            className="fairy-bubble absolute -top-[52px] left-1/2 -translate-x-1/2 whitespace-nowrap cursor-pointer transition-all duration-300"
+            className="fairy-bubble absolute -top-[35px] sm:-top-[52px] left-1/2 -translate-x-1/2 whitespace-nowrap cursor-pointer transition-all duration-300 px-3 py-1 sm:px-4 sm:py-1.5 rounded-2xl sm:rounded-xl"
             style={{
               background: 'rgba(139, 92, 246, 0.12)',
               backdropFilter: 'blur(16px)',
               WebkitBackdropFilter: 'blur(16px)',
               border: '1px solid rgba(139, 92, 246, 0.2)',
-              borderRadius: '14px',
-              padding: '5px 12px',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = 'rgba(139, 92, 246, 0.2)';
@@ -164,10 +162,10 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
               e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.2)';
             }}
           >
-            <p className="text-xs text-white/80">不知道看啥？帮你推荐～</p>
+            <p className="text-xs sm:text-sm text-white/80">不知道看啥？帮你推荐～</p>
           </div>
           <div
-            className="fairy-sprite cursor-pointer text-3xl select-none"
+            className="fairy-sprite cursor-pointer text-3xl sm:text-[40px] select-none"
             onClick={() => { onEnable(); setPhase('quickrec'); }}
             title="好片速推"
           >
