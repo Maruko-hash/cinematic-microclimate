@@ -72,11 +72,11 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           transition={{ duration: 0.8 }}
         >
           <p className="text-sm text-white/50 leading-relaxed mb-3">
-            艺术之所以吸引我们，只因为它揭示了最隐秘的自我。—— 让-吕克·戈达尔
+            艺术之所以吸引我们，只因为它揭示了最隐秘的自我。<br/>—— 让-吕克·戈达尔
           </p>
 
           <h1
-            className="text-[55px] sm:text-7xl md:text-9xl font-serif font-bold mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0.08em] sm:tracking-[0.12em] md:tracking-[0.15em]"
+            className="text-[60px] sm:text-7xl md:text-9xl font-serif font-bold mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0.08em] sm:tracking-[0.12em] md:tracking-[0.15em]"
             style={{ textShadow: '0 0 100px rgba(139,92,246,0.15)' }}
           >
             观影微气候
