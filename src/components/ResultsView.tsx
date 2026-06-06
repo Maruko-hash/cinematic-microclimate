@@ -146,9 +146,9 @@ export default function ResultsView() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="w-full h-full flex flex-row">
+      <div className="w-full h-full flex flex-col md:flex-row">
         {/* ── Left column: Climate info ── */}
-        <div className="w-[65%] h-full flex flex-col overflow-y-auto pl-16 pr-10">
+        <div className="w-full md:w-[65%] h-full flex flex-col overflow-y-auto pl-4 md:pl-16 pr-4 md:pr-10">
           {/* Label + Description */}
           <div className="px-4 pt-8 pb-24 w-full text-center">
             <motion.div
@@ -171,16 +171,16 @@ export default function ResultsView() {
 
           {/* Radar chart + insight */}
           <motion.div
-            className="flex flex-row w-full px-4 py-4"
+            className="flex flex-col sm:flex-row w-full px-4 py-4"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <div className="w-[52%] h-[200px]">
+            <div className="w-full sm:w-[52%] h-[200px]">
               <ResponsiveContainer width="100%" height="100%">
                 <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="70%">
                   <PolarGrid stroke="rgba(255,255,255,0.12)" />
-                  <PolarAngleAxis dataKey="dimension" tick={{ fill: 'rgba(255,255,255,0.6)', fontSize: 11 }} />
+                  <PolarAngleAxis dataKey="dimension" tick={{ fill: 'rgba(255,255,255,0.6)', fontSize: 10 }} />
                   <PolarRadiusAxis angle={90} tick={false} axisLine={false} />
                   <Radar
                     name="得分"
@@ -204,7 +204,7 @@ export default function ResultsView() {
                 </RadarChart>
               </ResponsiveContainer>
             </div>
-            <div className="w-[48%] flex flex-col justify-center pl-6">
+            <div className="w-full sm:w-[48%] flex flex-col justify-center pl-0 sm:pl-6 pt-4 sm:pt-0">
               <h3
                 className="text-base md:text-lg font-semibold mb-3"
                 style={{ color: matchedClimate.theme.accentColor }}
@@ -277,7 +277,7 @@ export default function ResultsView() {
         </div>
 
         {/* ── Right column: Movie recommendations ── */}
-        <div className="w-[35%] h-full overflow-y-auto pl-8 pr-6 pt-12 pb-4">
+        <div className="w-full md:w-[35%] h-full overflow-y-auto border-t md:border-t-0 md:border-l border-white/60 pl-4 md:pl-8 pr-4 md:pr-6 pt-4 md:pt-12 pb-4">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}

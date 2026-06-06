@@ -24,7 +24,7 @@ function PosterStrip() {
   const doubled = useMemo(() => [...posters, ...posters], [posters]);
 
   return (
-    <div className="fixed bottom-[3vh] left-0 w-full h-[32vh] z-[1] pointer-events-none">
+    <div className="fixed bottom-[3vh] left-0 w-full h-[20vh] sm:h-[32vh] z-[1] pointer-events-none">
       <div
         className="w-full h-full overflow-hidden"
         style={{
@@ -76,7 +76,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           </p>
 
           <h1
-            className="text-9xl sm:text-[10rem] md:text-[11rem] font-serif font-bold mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0.15em]"
+            className="text-5xl sm:text-7xl md:text-9xl font-serif font-bold mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0.08em] sm:tracking-[0.12em] md:tracking-[0.15em]"
             style={{ textShadow: '0 0 100px rgba(139,92,246,0.15)' }}
           >
             观影微气候
@@ -90,7 +90,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
 
           <div className="flex items-center justify-center gap-3">
             <p
-              className="text-sm text-white/30 tracking-[0.3em]"
+              className="text-xs md:text-sm text-white/30 tracking-[0.15em] md:tracking-[0.3em]"
               style={{ fontFamily: "'Special Elite', serif" }}
             >
               CINEMATIC MICROCLIMATE
