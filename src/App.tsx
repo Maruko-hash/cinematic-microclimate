@@ -142,7 +142,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
         </motion.div>
       </div>
 
-      <div className="fixed bottom-[26vh] sm:bottom-[38vh] right-[12%] sm:right-[12%] z-20">
+      <div className="fixed bottom-[26vh] sm:bottom-[38vh] right-[14%] sm:right-[20%] z-20">
         <div className="relative">
           <div
             onClick={() => { onEnable(); setPhase('quickrec'); }}
