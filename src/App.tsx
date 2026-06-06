@@ -75,7 +75,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
             艺术之所以吸引我们，只因为它揭示了最隐秘的自我。<span className="block sm:inline">—— 让-吕克·戈达尔</span>
           </p>
 
-          <div className="h-[5vh] sm:hidden" />
+          <div className="h-[4vh] sm:hidden" />
 
           <h1
             className="text-[70px] sm:text-7xl md:text-9xl font-serif font-bold leading-none mb-0.5 sm:mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0em] sm:tracking-[0.12em] md:tracking-[0.15em]"
@@ -107,7 +107,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           >
             <motion.button
               onClick={() => handleMode('simple')}
-              className="flex-shrink-0 flex flex-col items-center justify-center gap-0 sm:gap-0.5 px-22 py-22 sm:px-32 sm:py-32 rounded-3xl transition-transform duration-500 backdrop-blur-xl bg-[rgba(100,70,150,0.16)]"
+              className="flex-shrink-0 flex flex-col items-center justify-center gap-0 sm:gap-0.5 px-22 py-22 sm:px-32 sm:py-32 rounded-3xl transition-transform duration-500 bg-[rgba(100,70,150,0.16)]"
               style={{
                 border: '1px solid rgba(192, 132, 252, 0.25)',
                 boxShadow: '0 0 30px rgba(139, 92, 246, 0.06)',
@@ -124,7 +124,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
 
             <motion.button
               onClick={() => handleMode('deep')}
-              className="flex-shrink-0 flex flex-col items-center justify-center gap-0 sm:gap-0.5 px-22 py-22 sm:px-32 sm:py-32 rounded-3xl transition-transform duration-500 backdrop-blur-xl bg-[rgba(160,110,60,0.16)]"
+              className="flex-shrink-0 flex flex-col items-center justify-center gap-0 sm:gap-0.5 px-22 py-22 sm:px-32 sm:py-32 rounded-3xl transition-transform duration-500 bg-[rgba(160,110,60,0.16)]"
               style={{
                 border: '1px solid rgba(252, 211, 77, 0.25)',
                 boxShadow: '0 0 30px rgba(245, 158, 11, 0.06)',
