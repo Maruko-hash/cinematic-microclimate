@@ -55,6 +55,19 @@ export default function QuizView() {
           }}
         />
 
+        {/* PC: Badge 左上角 */}
+        <div className="hidden md:block absolute top-12 left-4 md:top-16 md:left-6 z-20">
+          <span className="text-[11px] tracking-wide px-3 py-0.5 rounded-full"
+            style={{
+              background: 'rgba(139, 92, 246, 0.08)',
+              color: 'rgba(196, 181, 253, 0.55)',
+              fontFamily: "'Special Elite', serif",
+            }}
+          >
+            🎬 观影微气候
+          </span>
+        </div>
+
         {/* Content */}
         <div className="flex flex-col justify-evenly min-h-[55vh] md:min-h-[45vh] pt-16 pb-12 md:py-14 px-8 md:px-16">
           {/* Scenario */}
@@ -130,8 +143,8 @@ export default function QuizView() {
             ))}
           </div>
 
-          {/* Progress dots + badge */}
-          <div className="flex items-center justify-center gap-3">
+          {/* iPhone: Progress dots + badge */}
+          <div className="flex items-center justify-center gap-3 md:hidden">
             <div className="flex flex-col items-center gap-1.5">
               {rows.map((rowLen, ri) => {
                 const dots = [];
