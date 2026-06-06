@@ -6,7 +6,7 @@ export function useBGM() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = new Audio('/audio/bgm.mp3');
+    const audio = new Audio(`${import.meta.env.BASE_URL}audio/bgm.mp3`);
     audio.loop = true;
     audio.volume = 0.25;
     audioRef.current = audio;
