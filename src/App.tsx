@@ -71,8 +71,8 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-sm text-white/50 leading-relaxed mb-3">
-            艺术之所以吸引我们，只因为它揭示了最隐秘的自我。<br/>—— 让-吕克·戈达尔
+          <p className="text-sm sm:text-lg text-white/50 leading-relaxed mb-3">
+            艺术之所以吸引我们，只因为它揭示了最隐秘的自我。—— 让-吕克·戈达尔
           </p>
 
           <h1
