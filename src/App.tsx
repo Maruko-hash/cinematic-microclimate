@@ -105,7 +105,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           >
             <motion.button
               onClick={() => handleMode('simple')}
-              className="flex-shrink-0 flex flex-col items-center justify-center gap-0 sm:gap-0.5 px-22 py-22 sm:px-32 sm:py-32 rounded-3xl transition-all duration-500 backdrop-blur-xl"
+              className="flex-shrink-0 flex flex-col items-center justify-center gap-0 sm:gap-0.5 px-22 py-22 sm:px-32 sm:py-32 rounded-3xl transition-transform duration-500 backdrop-blur-xl"
               style={{
                 background: 'rgba(100, 70, 150, 0.16)',
                 border: '1px solid rgba(192, 132, 252, 0.25)',
@@ -123,7 +123,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
 
             <motion.button
               onClick={() => handleMode('deep')}
-              className="flex-shrink-0 flex flex-col items-center justify-center gap-0 sm:gap-0.5 px-22 py-22 sm:px-32 sm:py-32 rounded-3xl transition-all duration-500 backdrop-blur-xl"
+              className="flex-shrink-0 flex flex-col items-center justify-center gap-0 sm:gap-0.5 px-22 py-22 sm:px-32 sm:py-32 rounded-3xl transition-transform duration-500 backdrop-blur-xl"
               style={{
                 background: 'rgba(160, 110, 60, 0.16)',
                 border: '1px solid rgba(252, 211, 77, 0.25)',
