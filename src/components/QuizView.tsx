@@ -55,19 +55,6 @@ export default function QuizView() {
           }}
         />
 
-        {/* Badge — 左上角，标题上方 */}
-        <div className="absolute top-12 left-4 md:top-16 md:left-6 z-20">
-          <span className="text-[11px] tracking-wide px-3 py-0.5 rounded-full"
-            style={{
-              background: 'rgba(139, 92, 246, 0.08)',
-              color: 'rgba(196, 181, 253, 0.55)',
-              fontFamily: "'Special Elite', serif",
-            }}
-          >
-            🎬 观影微气候
-          </span>
-        </div>
-
         {/* Content */}
         <div className="flex flex-col justify-evenly min-h-[55vh] md:min-h-[45vh] pt-16 pb-12 md:py-14 px-8 md:px-16">
           {/* Scenario */}
@@ -143,42 +130,53 @@ export default function QuizView() {
             ))}
           </div>
 
-          {/* Progress dots */}
-          <div className="flex flex-col items-center gap-1.5">
-            {rows.map((rowLen, ri) => {
-              const dots = [];
-              for (let i = 0; i < rowLen; i++) {
-                const idx = dotIndex++;
-                const isPast = idx < currentQuestionIndex;
-                const isCurrent = idx === currentQuestionIndex;
-                dots.push(
-                  <span
-                    key={idx}
-                    className={`rounded-full transition-all duration-500 ${
-                      isCurrent ? 'w-2 h-2' : 'w-1.5 h-1.5'
-                    }`}
-                    style={{
-                      background: isCurrent
-                        ? '#fff'
-                        : isPast
-                          ? 'linear-gradient(135deg, #a78bfa, #ec4899)'
-                          : 'rgba(255, 255, 255, 0.08)',
-                      boxShadow: isCurrent
-                        ? '0 0 6px rgba(255, 255, 255, 0.4)'
-                        : isPast
-                          ? '0 0 3px rgba(139, 92, 246, 0.4)'
-                          : 'none',
-                      animation: isCurrent ? 'pulse 2s ease-in-out infinite' : 'none',
-                    }}
-                  />
+          {/* Progress dots + badge */}
+          <div className="flex items-center justify-center gap-3">
+            <div className="flex flex-col items-center gap-1.5">
+              {rows.map((rowLen, ri) => {
+                const dots = [];
+                for (let i = 0; i < rowLen; i++) {
+                  const idx = dotIndex++;
+                  const isPast = idx < currentQuestionIndex;
+                  const isCurrent = idx === currentQuestionIndex;
+                  dots.push(
+                    <span
+                      key={idx}
+                      className={`rounded-full transition-all duration-500 ${
+                        isCurrent ? 'w-2 h-2' : 'w-1.5 h-1.5'
+                      }`}
+                      style={{
+                        background: isCurrent
+                          ? '#fff'
+                          : isPast
+                            ? 'linear-gradient(135deg, #a78bfa, #ec4899)'
+                            : 'rgba(255, 255, 255, 0.08)',
+                        boxShadow: isCurrent
+                          ? '0 0 6px rgba(255, 255, 255, 0.4)'
+                          : isPast
+                            ? '0 0 3px rgba(139, 92, 246, 0.4)'
+                            : 'none',
+                        animation: isCurrent ? 'pulse 2s ease-in-out infinite' : 'none',
+                      }}
+                    />
+                  );
+                }
+                return (
+                  <div key={ri} className="flex justify-center gap-1.5">
+                    {dots}
+                  </div>
                 );
-              }
-              return (
-                <div key={ri} className="flex justify-center gap-1.5">
-                  {dots}
-                </div>
-              );
-            })}
+              })}
+            </div>
+            <span className="text-[11px] tracking-wide px-3 py-0.5 rounded-full"
+              style={{
+                background: 'rgba(139, 92, 246, 0.08)',
+                color: 'rgba(196, 181, 253, 0.55)',
+                fontFamily: "'Special Elite', serif",
+              }}
+            >
+              🎬 观影微气候
+            </span>
           </div>
         </div>
       </motion.div>
