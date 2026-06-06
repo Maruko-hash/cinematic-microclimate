@@ -62,7 +62,7 @@ export default function QuizView() {
           <AnimatePresence mode="wait">
             <motion.h2
               key={`scenario-${currentQ.id}`}
-              className="text-[19px] md:text-4xl font-serif font-bold text-center leading-[1.2] mb-8 md:mb-10 whitespace-pre-line"
+              className="text-[19px] md:text-4xl font-serif font-bold text-center leading-[1.2] md:leading-normal mb-8 md:mb-10 whitespace-pre-line"
               style={{
                 color: 'rgba(255, 255, 255, 0.9)',
                 textShadow: '0 0 40px rgba(139, 92, 246, 0.15)',
