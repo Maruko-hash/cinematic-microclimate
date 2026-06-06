@@ -64,9 +64,9 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
 
   return (
     <>
-      <div className="relative z-10 flex flex-col items-center justify-start sm:justify-center min-h-screen px-4">
+      <div className="relative z-10 flex flex-col items-center pt-[10vh] sm:justify-center sm:pt-0 min-h-screen px-4">
         <motion.div
-          className="text-center relative -top-[1vh] sm:-top-[8vh]"
+          className="text-center relative sm:-top-[8vh]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
