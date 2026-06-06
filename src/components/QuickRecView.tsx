@@ -12,7 +12,7 @@ declare global {
 
 function getPosterSrc(movie: Movie): string | null {
   if (movie.poster && window.POSTER_DATA?.[movie.poster]) return window.POSTER_DATA[movie.poster];
-  if (movie.poster) return `/posters/${movie.poster}`;
+  if (movie.poster) return `${import.meta.env.BASE_URL}posters/${movie.poster}`;
   return null;
 }
 

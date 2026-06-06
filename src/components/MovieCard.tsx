@@ -12,7 +12,7 @@ function getPosterSrc(movie: Movie): string | null {
     return window.POSTER_DATA[movie.poster];
   }
   if (movie.poster) {
-    return `/posters/${movie.poster}`;
+    return `${import.meta.env.BASE_URL}posters/${movie.poster}`;
   }
   return null;
 }
