@@ -76,7 +76,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           </p>
 
           <h1
-            className="text-[68px] sm:text-7xl md:text-9xl font-serif font-bold mb-1 sm:mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0.04em] sm:tracking-[0.12em] md:tracking-[0.15em]"
+            className="text-[70px] sm:text-7xl md:text-9xl font-serif font-bold mb-0.5 sm:mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0em] sm:tracking-[0.12em] md:tracking-[0.15em]"
             style={{ textShadow: '0 0 100px rgba(139,92,246,0.15)' }}
           >
             观影微气候
@@ -98,7 +98,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           <div className="h-5" />
 
           <motion.div
-            className="flex flex-col md:flex-row gap-8 justify-center"
+            className="flex flex-col md:flex-row gap-4 sm:gap-8 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
@@ -116,8 +116,8 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
             >
               <Sparkles size={16} className="text-purple-300 sm:text-lg" />
               <div className="text-center">
-                <div className="text-sm sm:text-xl font-semibold text-white/85">风格速测</div>
-                <div className="text-[7px] sm:text-xs text-white/35 mt-2">15 题 · 约 3 分钟</div>
+                <div className="text-xl font-semibold text-white/85">风格速测</div>
+                <div className="text-[10px] sm:text-xs text-white/35 mt-2">15 题 · 约 3 分钟</div>
               </div>
             </motion.button>
 
@@ -134,8 +134,8 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
             >
               <Zap size={16} className="text-amber-300 sm:text-lg" />
               <div className="text-center">
-                <div className="text-sm sm:text-xl font-semibold text-white/85">灵魂捕捉</div>
-                <div className="text-[7px] sm:text-xs text-white/35 mt-2">36 题 · 约 7 分钟</div>
+                <div className="text-xl font-semibold text-white/85">灵魂捕捉</div>
+                <div className="text-[10px] sm:text-xs text-white/35 mt-2">36 题 · 约 7 分钟</div>
               </div>
             </motion.button>
           </motion.div>
