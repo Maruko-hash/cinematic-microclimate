@@ -62,7 +62,7 @@ export default function QuizView() {
           <AnimatePresence mode="wait">
             <motion.h2
               key={`scenario-${currentQ.id}`}
-              className="text-[19px] md:text-4xl font-serif font-bold text-center leading-[1.35] md:leading-normal mb-8 md:mb-10 whitespace-pre-line"
+              className="text-[19px] md:text-4xl font-serif font-bold text-center leading-[1.5] md:leading-normal mb-8 md:mb-10 whitespace-pre-line"
               style={{
                 color: 'rgba(255, 255, 255, 0.9)',
                 textShadow: '0 0 40px rgba(139, 92, 246, 0.15)',
@@ -119,7 +119,7 @@ export default function QuizView() {
                   />
                 )}
                 <p
-                  className="text-[16px] md:text-xl leading-[1.35] md:leading-relaxed"
+                  className="text-[16px] md:text-xl leading-[1.5] md:leading-relaxed"
                   style={{
                     color: selected === opt.id
                       ? 'rgba(255, 255, 255, 0.93)'
