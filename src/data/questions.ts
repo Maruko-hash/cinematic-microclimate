@@ -187,7 +187,7 @@ export const questions: Question[] = [
   },
   {
     id: 18,
-    scenario: "看电影时手机突然弹出一条\n消息提示。你会：",
+    scenario: "看电影时\n手机突然弹出一条消息提示。你会：",
     options: [
       { id: "18A", text: "暂停电影先回消息，电影可以等。", scores: s(5, -5, -5, -8, -18) },
       { id: "18B", text: "不理它，等电影看完再说，现在我在另一个世界里。", scores: s(-8, 10, 5, 12, 22) },
