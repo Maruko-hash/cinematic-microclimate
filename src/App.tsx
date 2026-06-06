@@ -24,7 +24,7 @@ function PosterStrip() {
   const doubled = useMemo(() => [...posters, ...posters], [posters]);
 
   return (
-    <div className="fixed bottom-[3vh] left-0 w-full h-[20vh] sm:h-[32vh] z-[1] pointer-events-none">
+    <div className="fixed bottom-[3vh] left-0 w-full h-[30vh] sm:h-[32vh] z-[1] pointer-events-none">
       <div
         className="w-full h-full overflow-hidden"
         style={{
@@ -64,9 +64,9 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
 
   return (
     <>
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
+      <div className="relative z-10 flex flex-col items-center justify-start sm:justify-center min-h-screen px-4">
         <motion.div
-          className="text-center relative -top-[8vh]"
+          className="text-center relative -top-[1vh] sm:-top-[8vh]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -142,7 +142,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
         </motion.div>
       </div>
 
-      <div className="fixed bottom-[26vh] sm:bottom-[38vh] right-[14%] sm:right-[30%] z-20">
+      <div className="fixed bottom-[34vh] sm:bottom-[38vh] right-[14%] sm:right-[30%] z-20">
         <div className="relative">
           <div
             onClick={() => { onEnable(); setPhase('quickrec'); }}
