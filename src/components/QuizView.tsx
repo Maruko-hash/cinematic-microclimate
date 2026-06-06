@@ -31,7 +31,7 @@ export default function QuizView() {
   let dotIndex = 0;
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8">
+    <div className="relative min-h-screen flex flex-col items-center justify-center px-8 md:px-4 py-8">
       {/* Main glass card */}
       <motion.div
         key={currentQ.id}
@@ -69,7 +69,7 @@ export default function QuizView() {
         </div>
 
         {/* Content */}
-        <div className="flex flex-col justify-evenly min-h-[45vh] px-8 py-10 md:px-16 md:py-14">
+        <div className="flex flex-col justify-evenly min-h-[55vh] md:min-h-[45vh] pt-16 pb-12 md:py-14 px-8 md:px-16">
           {/* Scenario */}
           <AnimatePresence mode="wait">
             <motion.h2
