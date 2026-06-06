@@ -64,7 +64,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
 
   return (
     <>
-      <div className="relative z-10 flex flex-col items-center pt-[30vh] sm:justify-center sm:pt-0 min-h-screen px-4">
+      <div className="relative z-10 flex flex-col items-center pt-10 sm:justify-center sm:pt-0 min-h-screen px-4">
         <motion.div
           className="text-center relative sm:-top-[8vh]"
           initial={{ opacity: 0, y: 30 }}
@@ -76,13 +76,13 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           </p>
 
           <h1
-            className="text-[68px] sm:text-7xl md:text-9xl font-serif font-bold mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0.04em] sm:tracking-[0.12em] md:tracking-[0.15em]"
+            className="text-[68px] sm:text-7xl md:text-9xl font-serif font-bold mb-1 sm:mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0.04em] sm:tracking-[0.12em] md:tracking-[0.15em]"
             style={{ textShadow: '0 0 100px rgba(139,92,246,0.15)' }}
           >
             观影微气候
           </h1>
 
-          <div className="flex items-center justify-center gap-4 mb-2.5">
+          <div className="flex items-center justify-center gap-4 mb-1.5 sm:mb-2.5">
             <div className="h-px w-12 bg-gradient-to-r from-transparent via-purple-400/40 to-purple-400/40" />
             <span className="text-purple-400/25 text-sm">✧</span>
             <div className="h-px w-12 bg-gradient-to-l from-transparent via-purple-400/40 to-purple-400/40" />
@@ -105,7 +105,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           >
             <motion.button
               onClick={() => handleMode('simple')}
-              className="flex-shrink-0 flex flex-col items-center justify-center gap-0.5 px-32 py-32 rounded-3xl transition-all duration-500 backdrop-blur-xl"
+              className="flex-shrink-0 flex flex-col items-center justify-center gap-0 sm:gap-0.5 px-22 py-22 sm:px-32 sm:py-32 rounded-3xl transition-all duration-500 backdrop-blur-xl"
               style={{
                 background: 'rgba(100, 70, 150, 0.16)',
                 border: '1px solid rgba(192, 132, 252, 0.25)',
@@ -114,16 +114,16 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
             >
-              <Sparkles size={22} className="text-purple-300" />
+              <Sparkles size={16} className="text-purple-300 sm:text-lg" />
               <div className="text-center">
-                <div className="text-lg font-semibold text-white/85">风格速测</div>
-                <div className="text-[10px] text-white/35 mt-2">15 题 · 约 3 分钟</div>
+                <div className="text-sm sm:text-xl font-semibold text-white/85">风格速测</div>
+                <div className="text-[7px] sm:text-xs text-white/35 mt-2">15 题 · 约 3 分钟</div>
               </div>
             </motion.button>
 
             <motion.button
               onClick={() => handleMode('deep')}
-              className="flex-shrink-0 flex flex-col items-center justify-center gap-0.5 px-32 py-32 rounded-3xl transition-all duration-500 backdrop-blur-xl"
+              className="flex-shrink-0 flex flex-col items-center justify-center gap-0 sm:gap-0.5 px-22 py-22 sm:px-32 sm:py-32 rounded-3xl transition-all duration-500 backdrop-blur-xl"
               style={{
                 background: 'rgba(160, 110, 60, 0.16)',
                 border: '1px solid rgba(252, 211, 77, 0.25)',
@@ -132,10 +132,10 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
             >
-              <Zap size={22} className="text-amber-300" />
+              <Zap size={16} className="text-amber-300 sm:text-lg" />
               <div className="text-center">
-                <div className="text-lg font-semibold text-white/85">灵魂捕捉</div>
-                <div className="text-[10px] text-white/35 mt-2">36 题 · 约 7 分钟</div>
+                <div className="text-sm sm:text-xl font-semibold text-white/85">灵魂捕捉</div>
+                <div className="text-[7px] sm:text-xs text-white/35 mt-2">36 题 · 约 7 分钟</div>
               </div>
             </motion.button>
           </motion.div>
