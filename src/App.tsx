@@ -72,17 +72,17 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           transition={{ duration: 0.8 }}
         >
           <p className="text-sm sm:text-lg text-white/50 leading-relaxed mb-3">
-            艺术之所以吸引我们，只因为它揭示了最隐秘的自我。—— 让-吕克·戈达尔
+            艺术之所以吸引我们，只因为它揭示了最隐秘的自我。<span className="block sm:inline">—— 让-吕克·戈达尔</span>
           </p>
 
           <h1
-            className="text-[70px] sm:text-7xl md:text-9xl font-serif font-bold mb-0.5 sm:mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0em] sm:tracking-[0.12em] md:tracking-[0.15em]"
+            className="text-[70px] sm:text-7xl md:text-9xl font-serif font-bold leading-none mb-0.5 sm:mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0em] sm:tracking-[0.12em] md:tracking-[0.15em]"
             style={{ textShadow: '0 0 100px rgba(139,92,246,0.15)' }}
           >
             观影微气候
           </h1>
 
-          <div className="flex items-center justify-center gap-4 mb-1.5 sm:mb-2.5">
+          <div className="flex items-center justify-center gap-4 -mt-1 mb-1.5 sm:mb-2.5">
             <div className="h-px w-12 bg-gradient-to-r from-transparent via-purple-400/40 to-purple-400/40" />
             <span className="text-purple-400/25 text-sm">✧</span>
             <div className="h-px w-12 bg-gradient-to-l from-transparent via-purple-400/40 to-purple-400/40" />
