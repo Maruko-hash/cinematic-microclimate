@@ -56,7 +56,7 @@ export default function QuizView() {
         />
 
         {/* Content */}
-        <div className="flex flex-col justify-start md:justify-evenly min-h-[55vh] md:min-h-[45vh] pt-[56px] pb-12 md:py-14 px-8 md:px-16">
+        <div className="flex flex-col justify-start md:justify-evenly min-h-[55vh] md:min-h-[45vh] pt-[80px] pb-12 md:py-14 px-8 md:px-16">
           {/* Scenario */}
           <AnimatePresence mode="wait">
             <motion.h2
