@@ -75,7 +75,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
             艺术之所以吸引我们，只因为它揭示了最隐秘的自我。<span className="block sm:inline">—— 让-吕克·戈达尔</span>
           </p>
 
-          <div className="h-[10vh] sm:hidden" />
+          <div className="h-[5vh] sm:hidden" />
 
           <h1
             className="text-[70px] sm:text-7xl md:text-9xl font-serif font-bold leading-none mb-0.5 sm:mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0em] sm:tracking-[0.12em] md:tracking-[0.15em]"
