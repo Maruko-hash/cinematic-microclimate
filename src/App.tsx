@@ -88,46 +88,12 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
             <div className="h-px w-12 bg-gradient-to-l from-transparent via-purple-400/40 to-purple-400/40" />
           </div>
 
-          <div className="flex items-center justify-center gap-3">
-            <p
-              className="text-xs md:text-sm text-white/30 tracking-[0.15em] md:tracking-[0.3em]"
-              style={{ fontFamily: "'Special Elite', serif" }}
-            >
-              CINEMATIC MICROCLIMATE
-            </p>
-
-            <div className="relative">
-              <div
-                onClick={() => { onEnable(); setPhase('quickrec'); }}
-                className="fairy-bubble absolute -top-[52px] left-1/2 -translate-x-1/2 whitespace-nowrap cursor-pointer transition-all duration-300"
-                style={{
-                  background: 'rgba(139, 92, 246, 0.12)',
-                  backdropFilter: 'blur(16px)',
-                  WebkitBackdropFilter: 'blur(16px)',
-                  border: '1px solid rgba(139, 92, 246, 0.2)',
-                  borderRadius: '14px',
-                  padding: '5px 12px',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(139, 92, 246, 0.2)';
-                  e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(139, 92, 246, 0.12)';
-                  e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.2)';
-                }}
-              >
-                <p className="text-xs text-white/80">不知道看啥？帮你推荐～</p>
-              </div>
-              <div
-                className="fairy-sprite cursor-pointer text-3xl select-none"
-                onClick={() => { onEnable(); setPhase('quickrec'); }}
-                title="好片速推"
-              >
-                🧚
-              </div>
-            </div>
-          </div>
+          <p
+            className="text-xs md:text-sm text-white/30 tracking-[0.15em] md:tracking-[0.3em]"
+            style={{ fontFamily: "'Special Elite', serif" }}
+          >
+            CINEMATIC MICROCLIMATE
+          </p>
 
           <div className="h-5" />
 
@@ -174,6 +140,40 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
             </motion.button>
           </motion.div>
         </motion.div>
+      </div>
+
+      <div className="fixed bottom-[26vh] sm:bottom-[38vh] left-1/2 -translate-x-1/2 z-20">
+        <div className="relative">
+          <div
+            onClick={() => { onEnable(); setPhase('quickrec'); }}
+            className="fairy-bubble absolute -top-[52px] left-1/2 -translate-x-1/2 whitespace-nowrap cursor-pointer transition-all duration-300"
+            style={{
+              background: 'rgba(139, 92, 246, 0.12)',
+              backdropFilter: 'blur(16px)',
+              WebkitBackdropFilter: 'blur(16px)',
+              border: '1px solid rgba(139, 92, 246, 0.2)',
+              borderRadius: '14px',
+              padding: '5px 12px',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(139, 92, 246, 0.2)';
+              e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.4)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(139, 92, 246, 0.12)';
+              e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.2)';
+            }}
+          >
+            <p className="text-xs text-white/80">不知道看啥？帮你推荐～</p>
+          </div>
+          <div
+            className="fairy-sprite cursor-pointer text-3xl select-none"
+            onClick={() => { onEnable(); setPhase('quickrec'); }}
+            title="好片速推"
+          >
+            🧚
+          </div>
+        </div>
       </div>
 
       <PosterStrip />
