@@ -55,21 +55,8 @@ export default function QuizView() {
           }}
         />
 
-        {/* Badge — 左上角 */}
-        <div className="absolute top-3 left-3 md:top-12 md:left-4 z-20">
-          <span className="text-[11px] tracking-wide px-3 py-0.5 rounded-full"
-            style={{
-              background: 'rgba(139, 92, 246, 0.08)',
-              color: 'rgba(196, 181, 253, 0.55)',
-              fontFamily: "'Special Elite', serif",
-            }}
-          >
-            🎬 观影微气候
-          </span>
-        </div>
-
         {/* Content */}
-        <div className="flex flex-col justify-evenly min-h-[55vh] md:min-h-[45vh] pt-16 pb-12 md:py-14 px-8 md:px-16">
+        <div className="flex flex-col justify-evenly min-h-[55vh] md:min-h-[45vh] pt-[40px] md:pt-16 pb-12 md:py-14 px-8 md:px-16">
           {/* Scenario */}
           <AnimatePresence mode="wait">
             <motion.h2
@@ -91,6 +78,17 @@ export default function QuizView() {
 
           {/* Options */}
           <div className="space-y-5 mb-8">
+            <div className="-mb-2">
+              <span className="text-[11px] tracking-wide px-3 py-0.5 rounded-full"
+                style={{
+                  background: 'rgba(139, 92, 246, 0.08)',
+                  color: 'rgba(196, 181, 253, 0.55)',
+                  fontFamily: "'Special Elite', serif",
+                }}
+              >
+                🎬 观影微气候
+              </span>
+            </div>
             {currentQ.options.map((opt, idx) => (
               <motion.button
                 key={opt.id}
