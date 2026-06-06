@@ -76,7 +76,7 @@ function HomeView({ onEnable }: { onEnable: () => void }) {
           </p>
 
           <h1
-            className="text-[70px] sm:text-7xl md:text-9xl font-serif font-bold leading-none mt-[30px] sm:mt-0 mb-0.5 sm:mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0em] sm:tracking-[0.12em] md:tracking-[0.15em]"
+            className="text-[70px] sm:text-7xl md:text-9xl font-serif font-bold leading-none mt-[47vh] sm:mt-0 mb-0.5 sm:mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent tracking-[0em] sm:tracking-[0.12em] md:tracking-[0.15em]"
             style={{ textShadow: '0 0 100px rgba(139,92,246,0.15)' }}
           >
             观影微气候
