@@ -216,7 +216,7 @@ export const questions: Question[] = [
   },
   {
     id: 21,
-    scenario: "你和朋友一起看电影，Ta中途开始玩手机。\n你会：",
+    scenario: "你和朋友一起看电影，Ta中途开始\n玩手机。你会：",
     options: [
       { id: "21A", text: "觉得没关系，每个人有自己的观看节奏，不一定都要正襟危坐。", scores: s(0, 5, 5, 8, -12) },
       { id: "21B", text: "有点不舒服，一起看的时候希望两个人都在同一个画面里。", scores: s(-5, 0, 12, 5, 20) },
