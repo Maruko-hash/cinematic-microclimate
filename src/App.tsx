@@ -37,7 +37,7 @@ function PosterStrip() {
           style={{ width: 'max-content', animation: 'scrollLeft 50s linear infinite' }}
         >
           {doubled.map((m, i) => {
-            const src = window.POSTER_DATA?.[m.poster];
+            const src = window.POSTER_DATA?.[m.poster] || `${import.meta.env.BASE_URL}posters/${m.poster}`;
             if (!src) return null;
             return (
               <img
