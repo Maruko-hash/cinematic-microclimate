@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const CHINESE_NUMS = ['一', '二', '三'];
 
 function formatScenario(text: string): string {
-  if (text.length <= 32) return text;
+  if (text.length <= 23 || text.includes('\n')) return text;
   return text.slice(0, 19) + '\n' + text.slice(19);
 }
 
