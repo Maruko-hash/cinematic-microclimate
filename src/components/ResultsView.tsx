@@ -148,7 +148,7 @@ export default function ResultsView() {
     >
       <div className="w-full h-full flex flex-col md:flex-row">
         {/* ── Left column: Climate info ── */}
-        <div className="w-full md:w-[65%] h-full flex flex-col overflow-y-auto pl-4 md:pl-16 pr-4 md:pr-10">
+        <div className="w-full md:w-[65%] md:h-full flex flex-col overflow-y-auto pl-4 md:pl-16 pr-4 md:pr-10">
           {/* Label + Description */}
           <div className="px-4 pt-8 pb-24 w-full text-center">
             <motion.div
@@ -251,8 +251,8 @@ export default function ResultsView() {
             ))}
           </motion.div>
 
-          {/* Restart button */}
-          <div className="px-4 pb-12 flex justify-center">
+          {/* Reset button (PC) */}
+          <div className="hidden md:flex px-4 pb-12 justify-center">
             <button
               onClick={reset}
               className="flex items-center gap-2 px-6 py-3 rounded-full text-base font-medium transition-all"
@@ -277,7 +277,7 @@ export default function ResultsView() {
         </div>
 
         {/* ── Right column: Movie recommendations ── */}
-        <div className="w-full md:w-[35%] h-full overflow-y-auto border-t md:border-t-0 md:border-l border-white/60 pl-4 md:pl-8 pr-4 md:pr-6 pt-4 md:pt-12 pb-4">
+        <div className="w-full md:w-[35%] md:h-full overflow-y-auto border-t md:border-t-0 md:border-l border-white/60 pl-4 md:pl-8 pr-4 md:pr-6 pt-4 md:pt-12 pb-4">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -306,6 +306,22 @@ export default function ResultsView() {
             <CategorySection title="🎥 纪录片" items={docs} accentColor={matchedClimate.theme.accentColor} />
             <CategorySection title="🐉 动漫" items={anime} accentColor={matchedClimate.theme.accentColor} />
           </motion.div>
+        </div>
+
+        {/* Reset button (iPhone) */}
+        <div className="md:hidden flex justify-center pb-8 pt-6">
+          <button
+            onClick={reset}
+            className="flex items-center gap-2 px-6 py-3 rounded-full text-base font-medium transition-all"
+            style={{
+              background: 'rgba(139, 92, 246, 0.1)',
+              border: '1px solid rgba(139, 92, 246, 0.2)',
+              color: 'rgba(196, 181, 253, 0.7)',
+            }}
+          >
+            <RefreshCw size={15} />
+            重新捕捉
+          </button>
         </div>
       </div>
     </motion.div>
