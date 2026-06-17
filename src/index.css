@@ -66,6 +66,7 @@
   --border-fairy-hover:   rgba(139, 92, 246, 0.4);
   --mesh-color-1:         #6366f1;
   --mesh-color-2:         #a855f7;
+  --mesh-opacity:         0.45;
 
   --nav-btn-border:       rgba(192, 132, 252, 0.15);
   --nav-btn-border-hover: rgba(192, 132, 252, 0.3);
@@ -133,6 +134,7 @@
   --border-fairy-hover:   rgba(139, 92, 246, 0.22);
   --mesh-color-1:         #c4b5fd;
   --mesh-color-2:         #f0abfc;
+  --mesh-opacity:         0.2;
 
   --nav-btn-border:       rgba(139, 92, 246, 0.12);
   --nav-btn-border-hover: rgba(139, 92, 246, 0.25);
@@ -176,12 +178,12 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
-  opacity: 0.25;
+  opacity: var(--mesh-opacity);
 }
 
 .mesh-gradient::before {
-  width: 60vw;
-  height: 60vw;
+  width: 80vw;
+  height: 80vw;
   top: -20%;
   left: -10%;
   background: var(--mesh-color-1, #6366f1);
@@ -189,8 +191,8 @@ body {
 }
 
 .mesh-gradient::after {
-  width: 50vw;
-  height: 50vw;
+  width: 70vw;
+  height: 70vw;
   bottom: -15%;
   right: -5%;
   background: var(--mesh-color-2, #a855f7);
