@@ -106,7 +106,7 @@ function CategorySection({ title, items, accentColor }: { title: string; items: 
   return (
     <div className="mb-6">
       <h4 className="text-sm font-semibold mb-3" style={{ color: accentColor }}>
-        {title} <span className="text-white/20">({items.length})</span>
+        {title} <span style={{ color: 'var(--text-subtle)' }}>({items.length})</span>
       </h4>
       <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory" style={{ scrollbarWidth: 'thin' }}>
         {items.map((m, i) => (
@@ -162,7 +162,7 @@ export default function ResultsView() {
               >
                 {matchedClimate.label}
               </h1>
-              <p className="text-white/50 text-base md:text-lg leading-[1.5] text-justify" style={{ textIndent: '2em' }}>
+              <p className="text-base md:text-lg leading-[1.5] text-justify" style={{ color: 'var(--text-dim)', textIndent: '2em' }}>
                 {matchedClimate.description}
               </p>
               <div className="text-base md:text-lg leading-[1.5]">&nbsp;</div>
@@ -179,8 +179,8 @@ export default function ResultsView() {
             <div className="w-full sm:w-[52%] h-[200px]">
               <ResponsiveContainer width="100%" height="100%">
                 <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="70%">
-                  <PolarGrid stroke="rgba(255,255,255,0.12)" />
-                  <PolarAngleAxis dataKey="dimension" tick={{ fill: 'rgba(255,255,255,0.6)', fontSize: 10 }} />
+                  <PolarGrid stroke="var(--radar-grid)" />
+                  <PolarAngleAxis dataKey="dimension" tick={{ fill: 'var(--radar-tick)', fontSize: 10 }} />
                   <PolarRadiusAxis angle={90} tick={false} axisLine={false} />
                   <Radar
                     name="得分"
@@ -211,7 +211,7 @@ export default function ResultsView() {
               >
                 专属气候人格 —— {matchedClimate.personalityTitle}
               </h3>
-              <p className="text-sm text-white/45 leading-relaxed">
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--text-dim)' }}>
                 {getPersonalityInsight(finalScores)}
               </p>
               <p
@@ -234,10 +234,10 @@ export default function ResultsView() {
             {dimLabels.map((d, i) => (
               <div key={d.name}>
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-sm md:text-base text-white/70 font-bold">{d.name}</span>
-                  <span className="text-xs font-mono text-white/30 ml-4">{d.score}</span>
+                  <span className="text-sm md:text-base font-bold" style={{ color: 'var(--text-secondary)' }}>{d.name}</span>
+                  <span className="text-xs font-mono ml-4" style={{ color: 'var(--text-subtle)' }}>{d.score}</span>
                 </div>
-                <div className="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+                <div className="w-full h-1.5 rounded-full overflow-hidden" style={{ background: 'var(--dim-bar-bg)' }}>
                   <div
                     className="h-full rounded-full transition-all duration-1000"
                     style={{
@@ -246,7 +246,7 @@ export default function ResultsView() {
                     }}
                   />
                 </div>
-                <p className="text-sm text-white/35 leading-relaxed mt-2">{matchedClimate.dimensions[i].text}</p>
+                <p className="text-sm leading-relaxed mt-2" style={{ color: 'var(--text-muted)' }}>{matchedClimate.dimensions[i].text}</p>
               </div>
             ))}
           </motion.div>
@@ -257,17 +257,17 @@ export default function ResultsView() {
               onClick={reset}
               className="flex items-center gap-2 px-6 py-3 rounded-full text-base font-medium transition-all"
               style={{
-                background: 'rgba(139, 92, 246, 0.1)',
-                border: '1px solid rgba(139, 92, 246, 0.2)',
-                color: 'rgba(196, 181, 253, 0.7)',
+                background: 'var(--bg-glass-purple)',
+                border: '1px solid var(--border-home-purple)',
+                color: 'var(--text-purple)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(139, 92, 246, 0.2)';
-                e.currentTarget.style.color = 'rgba(196, 181, 253, 0.95)';
+                e.currentTarget.style.background = 'var(--bg-glass)';
+                e.currentTarget.style.color = 'var(--text-primary)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
-                e.currentTarget.style.color = 'rgba(196, 181, 253, 0.7)';
+                e.currentTarget.style.background = 'var(--bg-glass-purple)';
+                e.currentTarget.style.color = 'var(--text-purple)';
               }}
             >
               <RefreshCw size={15} />
@@ -277,7 +277,10 @@ export default function ResultsView() {
         </div>
 
         {/* ── Right column: Movie recommendations ── */}
-        <div className="w-full md:w-[35%] md:h-full overflow-y-auto border-t md:border-t-0 md:border-l border-white/60 pl-4 md:pl-8 pr-4 md:pr-6 pt-4 md:pt-12 pb-4">
+        <div
+          className="w-full md:w-[35%] md:h-full overflow-y-auto border-t md:border-t-0 md:border-l pl-4 md:pl-8 pr-4 md:pr-6 pt-4 md:pt-12 pb-4"
+          style={{ borderColor: 'var(--divider)' }}
+        >
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -295,8 +298,8 @@ export default function ResultsView() {
             </h3>
             {movies.length > 0 && (
               <p
-                className="text-left text-sm md:text-base text-white/50 leading-relaxed mb-5"
-                style={{ textIndent: '2em' }}
+                className="text-left text-sm md:text-base leading-relaxed mb-5"
+                style={{ color: 'var(--text-dim)', textIndent: '2em' }}
               >
                 每一种观影心境，都有适配的光影温柔。结合你的五维审美特质与专属气候人格，为你筛选出最贴合你当下心境与审美偏好的专属影片。
               </p>
@@ -314,9 +317,17 @@ export default function ResultsView() {
             onClick={reset}
             className="flex items-center gap-2 px-6 py-3 rounded-full text-base font-medium transition-all"
             style={{
-              background: 'rgba(139, 92, 246, 0.1)',
-              border: '1px solid rgba(139, 92, 246, 0.2)',
-              color: 'rgba(196, 181, 253, 0.7)',
+              background: 'var(--bg-glass-purple)',
+              border: '1px solid var(--border-home-purple)',
+              color: 'var(--text-purple)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'var(--bg-glass)';
+              e.currentTarget.style.color = 'var(--text-primary)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'var(--bg-glass-purple)';
+              e.currentTarget.style.color = 'var(--text-purple)';
             }}
           >
             <RefreshCw size={15} />

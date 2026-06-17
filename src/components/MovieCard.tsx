@@ -29,12 +29,24 @@ export default function MovieCard({ movie, index }: { movie: Movie; index: numbe
       href={`https://www.themoviedb.org/${movie.media_type}/${movie.tmdb}`}
       target="_blank"
       rel="noopener"
-      className="flex-shrink-0 w-[110px] md:w-[120px] rounded-2xl overflow-hidden border border-white/5 bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/10 transition-all cursor-pointer group snap-start"
+      className="flex-shrink-0 w-[110px] md:w-[120px] rounded-2xl overflow-hidden cursor-pointer group snap-start transition-all"
+      style={{
+        background: 'var(--movie-card-bg)',
+        border: '1px solid var(--movie-card-border)',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = 'var(--movie-card-bg-hover)';
+        e.currentTarget.style.borderColor = 'var(--movie-card-border-hover)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = 'var(--movie-card-bg)';
+        e.currentTarget.style.borderColor = 'var(--movie-card-border)';
+      }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.15 + index * 0.06, duration: 0.4 }}
     >
-      <div className="aspect-[2/3] bg-white/5 relative overflow-hidden">
+      <div className="aspect-[2/3] relative overflow-hidden" style={{ background: 'var(--movie-card-bg)' }}>
         {poster ? (
           <img
             src={poster}
@@ -46,21 +58,23 @@ export default function MovieCard({ movie, index }: { movie: Movie; index: numbe
             }}
           />
         ) : null}
-        <div className={`w-full h-full flex items-center justify-center text-5xl opacity-10 ${poster ? 'hidden' : ''}`}>
+        <div className={`w-full h-full flex items-center justify-center text-5xl ${poster ? 'hidden' : ''}`} style={{ opacity: 'var(--movie-fallback-opacity)' }}>
           🎬
         </div>
-        <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-sm rounded-full px-2 py-0.5 text-xs font-semibold text-amber-400">
+        <div className="absolute top-2 right-2 backdrop-blur-sm rounded-full px-2 py-0.5 text-xs font-semibold text-amber-400"
+          style={{ background: 'var(--movie-score-bg)' }}>
           ⭐ {movie.vote_average.toFixed(1)}
         </div>
       </div>
       <div className="p-2.5">
-        <h4 className="text-sm font-semibold text-white/90 truncate">{movie.title}</h4>
+        <h4 className="text-sm font-semibold truncate" style={{ color: 'var(--text-primary)' }}>{movie.title}</h4>
         <div className="flex items-center gap-2 mt-1">
-          <span className="text-xs text-white/40">{year}</span>
-          <span className="text-xs text-white/40">·</span>
-          <span className="text-xs text-white/40">{movie.media_type === 'tv' ? '📺 剧集' : '🎬 电影'}</span>
+          <span className="text-xs" style={{ color: 'var(--text-muted)' }}>{year}</span>
+          <span className="text-xs" style={{ color: 'var(--text-muted)' }}>·</span>
+          <span className="text-xs" style={{ color: 'var(--text-muted)' }}>{movie.media_type === 'tv' ? '📺 剧集' : '🎬 电影'}</span>
         </div>
-        <span className={`inline-block mt-1.5 text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-white/5 ${badgeClass}`}>
+        <span className={`inline-block mt-1.5 text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${badgeClass}`}
+          style={{ background: 'var(--movie-card-bg)' }}>
           {badgeText}
         </span>
       </div>
