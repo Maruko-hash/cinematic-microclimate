@@ -151,6 +151,10 @@ html, body, #root {
   overflow-x: hidden;
 }
 
+html {
+  background: var(--bg-page);
+}
+
 body {
   background: var(--bg-page);
   color: var(--text-primary);
