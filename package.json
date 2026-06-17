@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && sed -i '' \"s/TIMESTAMP/$(date +%s)/g\" dist/index.html",
+    "build": "tsc -b && vite build && node -e \"require('fs').writeFileSync('dist/index.html',require('fs').readFileSync('dist/index.html','utf8').replace('TIMESTAMP',Date.now()))\"",
     "preview": "vite preview"
   },
   "dependencies": {
